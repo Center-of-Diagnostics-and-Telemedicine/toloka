@@ -1,0 +1,12 @@
+{
+    "conclusion": {
+      "type": "string",
+      "hidden": false,
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "hidden": false,
+      "required": true
+    }
+  }

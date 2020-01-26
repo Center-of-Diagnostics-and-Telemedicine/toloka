@@ -1,0 +1,36 @@
+<div class="commonText">
+    <div class="description">
+      <h3>Описание</h3>
+      {{description}}
+    </div>
+    <div class="conclusion">
+      <h3>Заключение</h3>
+      {{conclusion}}
+    </div>
+  </div>
+  <div class="result">
+          <div>{{field type="radio" name="result" label="Описание соответствует заключению" value="equal" hotkey="1"}}</div>
+          <div>{{field type="radio" name="result" label="Описание НЕ соответствует заключению"  value="notEqual" hotkey="2"}}</div>
+          <div class="_pathology">{{field type="radio" name="pathology" label="Есть патологии" value="yes"  hotkey="3"}}</div>
+          <div class="_pathology">{{field type="radio" name="pathology" label="Нет патологий" value="no"  hotkey="4"}}</div>
+  </div>
+  <div class="choose">
+      <div class="groups">
+          {{#each groups}}
+              {{field type="checkbox" name=@key label=this}}
+          {{/each}}
+      </div>
+      <div class="pathology">
+          {{#each checkboxes}}
+              <div class={{@key}}>
+                  <fieldset>
+                  <legend>{{#legend @key}}{{/legend}}</legend>
+                  {{#each this}}
+                      {{field type="checkbox" name=this label=(_label this)}}
+                  {{/each}}
+              </fieldset>
+              </div>
+          {{/each}}
+          {{field type="textarea" name="comment" class="comment"}} 
+      </div>
+  </div>

@@ -1,0 +1,27 @@
+{
+    "groups": {
+      "type": "array_string",
+      "hidden": false,
+      "required": false
+    },
+    "result": {
+      "type": "string",
+      "hidden": false,
+      "required": false
+    },
+    "comment": {
+      "type": "string",
+      "hidden": false,
+      "required": false
+    },
+    "pathology": {
+      "type": "string",
+      "hidden": false,
+      "required": false
+    },
+    "pathologyList": {
+      "type": "array_string",
+      "hidden": false,
+      "required": false
+    }
+  }
